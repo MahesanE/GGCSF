@@ -1,0 +1,27 @@
+<article>
+    <h1>Search Result</h1>
+    <button type="button" onclick="history.back()" class="back-btn">Back</button>
+    
+    <div *ngIf="movies.length > 0">
+      <div class="card" *ngFor="let m of movies">
+        <div class="card-header">
+          <img src="{{ m.image ? m.image : noImg }}" alt="{{ m.title }}" class="card-header-image">
+          <h2><a href="{{ m.reviewUrl }}" target="_blank">{{ m.title }}</a></h2>
+          <p>Rating: {{ m.rating }}</p>
+        </div>
+        <div class="card-body">
+          <h3>{{ m.headline }}</h3>
+          <p>{{ m.summary }}</p>
+          <p>Number of comments: {{ m.commentCount }}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" (click)="toComment(m.title)">Add a comment</button>
+        </div>
+      </div>
+    </div>
+    
+    <div *ngIf="movies.length == 0">
+      <p>Your search produced no results.</p>
+    </div>
+  </article>
+  

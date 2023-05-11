@@ -1,0 +1,10 @@
+<h1>Search Movie Review</h1>
+
+<form class="form" [formGroup]="searchForm" (submit)="onSubmit()">
+
+    <label for="title">Movie Name</label>
+    <input type="text" id="title" name="title" formControlName="title" required>
+  
+    <button type="submit" [disabled]="searchForm.invalid" class="search-button">Search</button>
+  
+  </form>

@@ -1,0 +1,17 @@
+.search-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  .search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
